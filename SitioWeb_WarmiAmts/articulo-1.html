@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- PASO 1: Cambia el título que aparece en la pestaña del navegador -->
+    <title>Título del Artículo, ejem warmi y la marcha del orgullo</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- HEADER (No necesitas tocar esto) -->
+   <!-- HEADER (Menú de Navegación) -->
+<header id="header" class="header-gradient fixed w-full top-0 z-50 transition-all duration-300">
+    <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+        <!-- LOGO Y TÍTULO DE LA ORGANIZACIÓN -->
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="images/logo.png" alt="Logo de Warmi Amts" class="h-16 w-auto flex-shrink-0">
+            <div class="text-white">
+                <span class="font-bold text-lg md:text-xl tracking-wide">WARMI A.M.T.S.</span>
+                <span class="text-xs md:text-sm block leading-tight">Asociación de Mujeres Trabajadoras Sexuales</span>
+            </div>
+        </a>
+        
+        <ul class="hidden md:flex space-x-6 items-center">
+            <li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li>
+            <li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li>
+            <li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li>
+            <li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li>
+        </ul>
+        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden header-gradient"><ul class="flex flex-col items-center space-y-4 py-4"><li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li><li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li><li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li><li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li></ul></div>
+</header>
+    <!-- Contenido del Artículo -->
+    <main class="content-section">
+        <article class="py-12 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                
+                <!-- PASO 2: Cambia el título principal que se ve en la página -->
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">Marcha del Orgullo</h1>
+
+                <!-- PASO 3: (Opcional) Cambia el autor y la fecha -->
+                <p class="text-gray-500 mb-8">Publicado por Warmi Amts | 27 de Junio, 2025</p>
+                
+                <!-- PASO 4: Cambia la imagen principal del artículo. Pon tu imagen en la carpeta /images/ -->
+                <img src="images/WhatsApp Image 2025-06-23 at 13.02.30 (1).jpeg" alt="Imagen principal del artículo" class="w-full h-auto rounded-lg shadow-md mb-8">
+                
+                <!-- PASO 5: Escribe aquí todo el contenido de tu artículo -->
+                <div class="prose lg:prose-xl max-w-none text-gray-700 leading-relaxed">
+                    <p class="mb-4">
+                        warmi participa de la marcha del orgullo.
+                    </p>
+                    <p class="mb-4">
+                        participamos en la marcha del orgullo el dia 28 de junio fue algo bueno bonito.
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold text-red-700 mt-6 mb-3">Fue el 27 de junio</h3>
+                    <p class="mb-4">
+                       que hacemos y que pondemos s.
+                    </p>
+                    
+                    <blockquote class="border-l-4 border-red-500 pl-4 italic my-6">
+                        queremos poner cosas importante aca 
+                    </blockquote>
+
+                    <p class="mb-4">
+                        agregamos mas parrafos segun lo que se necesite 
+                    </p>
+                    
+                    <!-- PASO 6: (Opcional) Si tienes un PDF, ponlo en la carpeta /docs/ y cambia el enlace aquí -->
+                    <div class="mt-10 text-center">
+                        <a href="docs/ejemplo-documento.pdf" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95">
+                            Descargar Versión PDF
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (No necesitas tocar esto) -->
+    <footer id="contacto" class="bg-gray-800 text-white py-12"><div class="container mx-auto px-6 text-center"><p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p><p class="text-gray-400"><strong>Email:</strong> <a href="mailto:contacto@warmiamts.org" class="hover:text-red-400">contacto@warmiamts.org</a></p><div class="mt-8 border-t border-gray-700 text-center py-6"><p class="text-gray-500 text-sm">&copy; 2025 Warmi Amts. Todos los derechos reservados.</p></div></div></footer>
+    <script>const mobileMenuButton=document.getElementById("mobile-menu-button"),mobileMenu=document.getElementById("mobile-menu");mobileMenuButton.addEventListener("click",()=>{mobileMenu.classList.toggle("hidden")});</script>
+</body>
+</html>
