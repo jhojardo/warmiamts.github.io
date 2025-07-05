@@ -1,48 +1,34 @@
 /* === ESTILOS GLOBALES PARA WARMI AMTS === */
-
-/* Configuración de Fuentes */
 body {
     font-family: 'Lato', sans-serif;
-    background-color: #FEFBF6; /* Color de fondo suave */
+    background-color: #FEFBF6;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
 }
-
-/* Estilo para el Header con degradado de la bandera */
 .header-gradient {
     background-image: linear-gradient(to right, #DA291C, #FFC72C, #007A33);
 }
-
-/* Estilo para los enlaces de navegación para que resalten */
 .nav-link {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-
-/* Estilo para la imagen de fondo de la portada */
 .hero-bg {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/WhatsApp Image 2025-06-23 at 13.01.49 (1).jpeg');
     background-size: cover;
     background-position: center;
 }
-
-/* Estilo para el fondo del pop-up (modal) */
 .modal-bg {
     background-color: rgba(0,0,0,0.6);
 }
-
-/* Estilos para una página de contenido genérica */
 .content-section {
-    padding-top: 100px; /* Espacio para que el contenido no quede debajo del menú fijo */
+    padding-top: 100px;
     padding-bottom: 50px;
 }
-
-/* Estilo para la sección de noticias */
 .news-section-bg {
-    background-color: #f7fafc; /* Un gris muy claro para diferenciar la sección */
+    background-color: #f7fafc;
 }
 
-/* === ESTILOS PARA LOS BOTONES SOCIALES FLOTANTES === */
+/* === BOTONES FLOTANTES === */
 .floating-socials {
     position: fixed;
     top: 50%;
@@ -53,7 +39,6 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     gap: 4px;
 }
-
 .social-icon {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 12px;
@@ -64,55 +49,218 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
 }
-
 .social-icon:hover {
     background-color: #DA291C;
     padding-right: 20px;
 }
-
 .social-icon svg {
     width: 24px;
     height: 24px;
     fill: white;
 }
-
-/* === ESTILOS PARA EL BOTÓN DE WHATSAPP FLOTANTE === */
-.floating-whatsapp {
+.floating-whatsapp-btn {
     position: fixed;
     bottom: 20px;
     left: 20px;
     z-index: 40;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+.floating-whatsapp-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.4);
+}
+.floating-whatsapp-btn .whatsapp-icon-svg {
+    width: 28px;
+    height: 28px;
+    fill: white;
 }
 
-.whatsapp-icon {
-    background-color: #25D366;
-    padding: 14px;
+/* === SECCIÓN LLAMADA A LA ACCIÓN (VIOLENCIA) === */
+.cta-violence-section {
+    background-color: #DA291C;
+    color: white;
+    padding: 4rem 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* === MENÚ DESPLEGABLE === */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown .dropbtn {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0.5rem; 
+  padding-bottom: 0.5rem;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 240px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  color: #fef08a;
+}
+
+/* === CARRUSEL DE NOTICIAS === */
+.perspective-carousel-container {
+    perspective: 1000px;
+    position: relative;
+}
+.carousel-item {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 25%;
+    transition: transform 0.5s ease, opacity 0.5s ease, z-index 0s 0.25s;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: block;
+}
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.carousel-item .item-header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 2rem 1rem 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    pointer-events: none;
+}
+.carousel-item.active { transform: translateX(0) scale(1); opacity: 1; z-index: 10; }
+.carousel-item.prev { transform: translateX(-50%) scale(0.8) rotateY(45deg); opacity: 0.7; z-index: 5; }
+.carousel-item.next { transform: translateX(50%) scale(0.8) rotateY(-45deg); opacity: 0.7; z-index: 5; }
+.carousel-item.hidden-prev { transform: translateX(-100%) scale(0.6) rotateY(45deg); opacity: 0; z-index: 1; }
+.carousel-item.hidden-next { transform: translateX(100%) scale(0.6) rotateY(-45deg); opacity: 0; z-index: 1; }
+.carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: none;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 20;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.carousel-nav-btn:hover {
+    background-color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+.carousel-nav-btn.prev { left: 0px; }
+.carousel-nav-btn.next { right: 0px; }
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.carousel-dot.active {
+    background-color: #DA291C;
+    transform: scale(1.2);
 }
 
-.whatsapp-icon:hover {
-    transform: scale(1.1);
-    box-shadow: 4px 4px 12px rgba(0,0,0,0.4);
-}
-
-.whatsapp-icon svg {
-    width: 32px;
-    height: 32px;
-    fill: white;
-}
-
-/* === NUEVOS ESTILOS PARA LA BIBLIOTECA === */
-.library-card {
+/* === PÁGINA SOBRE NOSOTRAS (EQUIPO) === */
+.team-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.library-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.team-photo-frame {
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    padding: 5px;
+    background: linear-gradient(45deg, #DA291C, #FFC72C, #007A33);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.team-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
 }
 
+/* === VIDEO RESPONSIVE (MATERIAL AUDIOVISUAL) === */
+.aspect-w-16 {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+}
+.aspect-h-9 {
+    height: 0;
+}
+.aspect-w-16 iframe, .aspect-h-9 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
