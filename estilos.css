@@ -264,3 +264,55 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
 }
+/* === ESTILOS PARA LAS NUEVAS TARJETAS DE PROGRAMA (V2) === */
+
+.program-card-v2 {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Para que la imagen respete los bordes redondeados */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto normal */
+}
+
+.program-card-v2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.program-card-img {
+    width: 100%;
+    height: 180px; /* Altura fija para la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+.program-card-content {
+    padding: 1.5rem;
+    flex-grow: 1; /* Hace que este contenedor crezca para ocupar el espacio */
+    display: flex;
+    flex-direction: column;
+}
+
+.program-card-content h3 {
+    color: #b91c1c; /* Color rojo oscuro para el título */
+}
+
+.program-card-btn {
+    margin-top: auto; /* Empuja el botón al final de la tarjeta */
+    padding: 0.6rem 1.5rem;
+    background-color: #DA291C; /* Color rojo principal de la marca */
+    color: white;
+    font-weight: bold;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Para que el padding funcione bien */
+    align-self: center; /* Centra el botón horizontalmente */
+}
+
+.program-card-v2:hover .program-card-btn {
+    background-color: #b91c1c; /* Rojo más oscuro al pasar el mouse */
+}
